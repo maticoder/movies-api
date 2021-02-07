@@ -6,28 +6,14 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 
 import { ReactComponent as HomeImage } from "../../images/home.svg";
+import variants from "../../utils/animation.js";
 
 import "./Home.scss";
 
-const variants = {
-  enter: {
-    y: 100,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-  },
-  exit: {
-    y: 100,
-    opacity: 0,
-  },
-};
-
 function Home() {
   return (
-    <div className="home">
-      <div className="home__content">
+    <motion.div className="home">
+      <motion.div className="home__content">
         <motion.h1
           variants={variants}
           initial="enter"
@@ -56,7 +42,7 @@ function Home() {
             Start now
           </Button>
         </motion.div>
-      </div>
+      </motion.div>
       <div className="home__icons">
         <motion.div
           variants={variants}
@@ -98,7 +84,7 @@ function Home() {
       >
         <HomeImage />
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 
