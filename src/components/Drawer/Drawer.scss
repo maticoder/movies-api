@@ -1,0 +1,27 @@
+.drawer {
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &__image {
+      margin-right: 0.8rem;
+    }
+
+    &__brand {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+
+  &__links {
+    margin-left: auto;
+  }
+
+  &__link {
+    span {
+      color: white;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../utils/colors";
+
+.navbar {
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &__image {
+      margin-right: 0.8rem;
+    }
+
+    &__brand {
+      font-size: 1.5rem;
+      font-weight: 400;
+
+      span:first-child {
+        color: $blue;
+      }
+    }
+  }
+
+  &__links {
+    margin-left: auto;
+  }
+
+  &__link {
+    span {
+      font-weight: 400;
+    }
+  }
+}
