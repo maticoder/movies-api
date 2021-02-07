@@ -8,8 +8,10 @@ const variants = {
     opacity: 1,
   },
   exit: {
-    y: 100,
     opacity: 0,
+    transition: {
+      delay: 0,
+    },
   },
 };
 

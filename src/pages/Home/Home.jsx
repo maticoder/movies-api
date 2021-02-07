@@ -26,6 +26,7 @@ function Home() {
           variants={variants}
           initial="enter"
           animate="animate"
+          exit="exit"
           transition={{ delay: 0.1 }}
         >
           Moviezilla is the world's most popular and authoritative source for
@@ -36,6 +37,7 @@ function Home() {
           variants={variants}
           initial="enter"
           animate="animate"
+          exit="exit"
           transition={{ delay: 0.2 }}
         >
           <Button className="home__button" color="primary" variant="contained">
@@ -48,6 +50,7 @@ function Home() {
           variants={variants}
           initial="enter"
           animate="animate"
+          exit="exit"
           transition={{ delay: 0.3 }}
         >
           <IconButton>
@@ -58,6 +61,7 @@ function Home() {
           variants={variants}
           initial="enter"
           animate="animate"
+          exit="exit"
           transition={{ delay: 0.4 }}
         >
           <IconButton>
@@ -68,6 +72,7 @@ function Home() {
           variants={variants}
           initial="enter"
           animate="animate"
+          exit="exit"
           transition={{ delay: 0.5 }}
         >
           <IconButton>
@@ -80,6 +85,7 @@ function Home() {
         variants={variants}
         initial="enter"
         animate="animate"
+        exit="exit"
         transition={{ delay: 0.6 }}
       >
         <HomeImage />

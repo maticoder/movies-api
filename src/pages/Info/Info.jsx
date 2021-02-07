@@ -1,29 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import "./Info.scss";
+import variants from "../../utils/animation.js";
 
-const variants = {
-  enter: {
-    y: 100,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-  },
-};
+import "./Info.scss";
 
 function Info() {
   return (
     <div className="info">
-      <motion.h1 variants={variants} initial="enter" animate="animate">
+      <motion.h1
+        variants={variants}
+        initial="enter"
+        animate="animate"
+        exit="exit"
+      >
         Info
       </motion.h1>
       <motion.div
         variants={variants}
         initial="enter"
         animate="animate"
+        exit="exit"
         transition={{ delay: 0.2 }}
         className="info__content"
       >
@@ -40,6 +37,7 @@ function Info() {
         variants={variants}
         initial="enter"
         animate="animate"
+        exit="exit"
         transition={{ delay: 0.4 }}
         className="info__content"
       >
@@ -62,6 +60,7 @@ function Info() {
         variants={variants}
         initial="enter"
         animate="animate"
+        exit="exit"
         transition={{ delay: 0.6 }}
         className="info__content"
       >
@@ -80,6 +79,7 @@ function Info() {
         variants={variants}
         initial="enter"
         animate="animate"
+        exit="exit"
         transition={{ delay: 0.8 }}
         className="info__content"
       >
