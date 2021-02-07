@@ -1,27 +1,16 @@
 .drawer {
-  &__logo {
-    display: flex;
-    align-items: center;
+  display: flex;
 
-    &__image {
-      margin-right: 0.8rem;
-    }
-
-    &__brand {
-      color: white;
-      font-size: 1.5rem;
-      font-weight: 400;
-    }
+  &__sidebar {
+    width: 240px;
   }
 
-  &__links {
-    margin-left: auto;
+  &__content {
+    flex-grow: 1;
+    padding: 30px;
   }
 
-  &__link {
-    span {
-      color: white;
-      font-weight: 400;
-    }
+  &__container {
+    overflow: auto;
   }
 }

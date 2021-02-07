@@ -1,6 +1,8 @@
 @import "../../utils/colors";
 
 .navbar {
+  z-index: 1400 !important;
+
   &__logo {
     display: flex;
     align-items: center;

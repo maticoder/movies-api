@@ -14,35 +14,22 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@material-ui/core";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import HomeIcon from "@material-ui/icons/Home";
+import StarIcon from "@material-ui/icons/Star";
+import WatchLaterIcon from "@material-ui/icons/WatchLater";
+import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import HelpIcon from "@material-ui/icons/Help";
 
-import { ReactComponent as Logo } from "../../images/logo_white.svg";
+import Navbar from "../Navbar/Navbar.jsx";
+import LinkItem from "../LinkItem/LinkItem.jsx";
 
 import "./Drawer.scss";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
-  appBar: {
-    zIndex: theme.zIndex.drawer + 1,
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-  },
   drawerPaper: {
     width: drawerWidth,
-  },
-  drawerContainer: {
-    overflow: "auto",
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
   },
 }));
 
@@ -51,76 +38,33 @@ function Sidebar(props) {
 
   return (
     <div className="drawer">
-      <div className={classes.root}>
-        <CssBaseline />
-        <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar>
-            <Link className="drawer__logo" to="/">
-              <div className="drawer__logo__image">
-                <Logo />
-              </div>
-              <h1 className="drawer__logo__brand">
-                <span>Movie</span>
-                <span>zilla</span>
-              </h1>
-            </Link>
-            <div className="drawer__links">
-              <Button
-                className="drawer__link"
-                component={Link}
-                to="/"
-                color="inherit"
-              >
-                Home
-              </Button>
-              <Button
-                className="drawer__link"
-                component={Link}
-                to="/dashboard"
-                color="inherit"
-              >
-                Dashboard
-              </Button>
-            </div>
-          </Toolbar>
-        </AppBar>
-        <Drawer
-          className={classes.drawer}
-          variant="permanent"
-          classes={{
-            paper: classes.drawerPaper,
-          }}
-        >
-          <Toolbar />
-          <div className={classes.drawerContainer}>
-            <List>
-              {["Popular", "Latest", "Top rated"].map((text, index) => (
-                <ListItem button key={text}>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItem>
-              ))}
-            </List>
-            <Divider />
-            <List>
-              {["Info"].map((text, index) => (
-                <ListItem button key={text}>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItem>
-              ))}
-            </List>
-          </div>
-        </Drawer>
-        <main className={classes.content}>
-          <Toolbar />
-          {props.children}
-        </main>
-      </div>
+      <CssBaseline />
+      <Navbar />
+      <Drawer
+        className="drawer__sidebar"
+        variant="permanent"
+        classes={{
+          paper: classes.drawerPaper,
+        }}
+      >
+        <Toolbar />
+        <div className="drawer__container">
+          <List>
+            <LinkItem to="/" text="Home" icon={<HomeIcon />} />
+            <LinkItem to="/popular" text="Popular" icon={<StarIcon />} />
+            <LinkItem to="/latest" text="Latest" icon={<WatchLaterIcon />} />
+            <LinkItem to="/top" text="Top rated" icon={<ThumbUpIcon />} />
+          </List>
+          <Divider />
+          <List>
+            <LinkItem to="/info" text="Info" icon={<HelpIcon />} />
+          </List>
+        </div>
+      </Drawer>
+      <main className="drawer__content">
+        <Toolbar />
+        {props.children}
+      </main>
     </div>
   );
 }
