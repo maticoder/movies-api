@@ -1,19 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Button,
-  Drawer,
-  AppBar,
-  CssBaseline,
-  Toolbar,
-  List,
-  Typography,
-  Divider,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@material-ui/core";
+import { Drawer, CssBaseline, Toolbar, List, Divider } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import StarIcon from "@material-ui/icons/Star";
 import WatchLaterIcon from "@material-ui/icons/WatchLater";

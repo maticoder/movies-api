@@ -25,7 +25,7 @@ function App() {
         <Switch>
           <Fragment>
             <Drawer>
-              <Route exact path="/" component={Dashboard} />
+              <Route exact path="/" component={Home} />
               <Route path="/popular" component={Dashboard} />
               <Route path="/info" component={Info} />
             </Drawer>
