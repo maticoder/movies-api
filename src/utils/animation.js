@@ -1,4 +1,4 @@
-const variants = {
+export const variants = {
   enter: {
     y: 100,
     opacity: 0,
@@ -15,4 +15,17 @@ const variants = {
   },
 };
 
-export default variants;
+export const appear = {
+  enter: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      delay: 0,
+    },
+  },
+};

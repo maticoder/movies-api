@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import variants from "../../utils/animation.js";
+import { variants } from "../../utils/animation.js";
 
 import "./Info.scss";
 

@@ -6,7 +6,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 
 import { ReactComponent as HomeImage } from "../../images/home.svg";
-import variants from "../../utils/animation.js";
+import { variants } from "../../utils/animation.js";
 
 import "./Home.scss";
 

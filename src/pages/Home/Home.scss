@@ -1,3 +1,5 @@
+@import "../../utils/colors";
+
 .home {
   display: flex;
   flex-direction: column;
@@ -33,7 +35,7 @@
     display: flex;
 
     span {
-      color: black;
+      color: $black;
     }
   }
 }
