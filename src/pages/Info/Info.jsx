@@ -91,6 +91,7 @@ function Info() {
           <li className="info__list__item">Axios</li>
           <li className="info__list__item">Framer</li>
           <li className="info__list__item">Lottie</li>
+          <li className="info__list__item">Moment.js</li>
           <li className="info__list__item">The movie databse API</li>
         </ul>
       </motion.div>

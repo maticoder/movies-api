@@ -40,7 +40,14 @@ function Popular({ movies, getPopularMovies, loader }) {
           </motion.p>
           <div className="popular__content">
             {movies.map((movie) => (
-              <MovieCard key={movie.id} title={movie.original_title} />
+              <MovieCard
+                key={movie.id}
+                title={movie.original_title}
+                vote={movie.vote_average}
+                date={movie.release_date}
+                description={movie.overview}
+                poster={movie.poster_path}
+              />
             ))}
           </div>
         </div>
