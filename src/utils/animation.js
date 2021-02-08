@@ -29,3 +29,21 @@ export const appear = {
     },
   },
 };
+
+export const card = {
+  enter: {
+    y: 100,
+    opacity: 0,
+  },
+  animate: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+  exit: {
+    opacity: 0,
+    transition: {
+      delay: 0,
+    },
+  },
+};

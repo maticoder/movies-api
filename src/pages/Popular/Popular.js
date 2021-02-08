@@ -5,6 +5,7 @@ import { getPopularMovies } from "../../redux/actions/movies.js";
 
 const mapStateToProps = (state) => ({
   movies: state.movies.movies,
+  loader: state.ui.loader,
 });
 
 const mapDispatchToProps = {
