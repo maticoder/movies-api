@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import store from "./redux/store.js";
 
 import Home from "./pages/Home/Home.jsx";
+import Movie from "./pages/Movie/Movie.jsx";
 import Popular from "./pages/Popular/Popular.js";
 import Latest from "./pages/Latest/Latest.jsx";
 import Info from "./pages/Info/Info.jsx";
@@ -34,6 +35,7 @@ function App() {
                 <AnimatePresence exitBeforeEnter={true}>
                   <Switch location={location} key={location.pathname}>
                     <Route exact path="/" component={Home} />
+                    <Route path="/movie" component={Movie} />
                     <Route path="/popular" component={Popular} />
                     <Route path="/latest" component={Latest} />
                     <Route path="/info" component={Info} />

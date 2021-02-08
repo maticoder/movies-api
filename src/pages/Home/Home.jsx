@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button, IconButton } from "@material-ui/core";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -40,7 +41,13 @@ function Home() {
           exit="exit"
           transition={{ delay: 0.2 }}
         >
-          <Button className="home__button" color="primary" variant="contained">
+          <Button
+            className="home__button"
+            component={Link}
+            to="/info"
+            color="primary"
+            variant="contained"
+          >
             Start now
           </Button>
         </motion.div>

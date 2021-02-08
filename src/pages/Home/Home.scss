@@ -38,4 +38,11 @@
       color: $black;
     }
   }
+
+  &__image {
+    svg {
+      width: 500px;
+      height: auto;
+    }
+  }
 }

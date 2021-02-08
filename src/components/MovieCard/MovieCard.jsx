@@ -2,19 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import { red } from "@material-ui/core/colors";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
@@ -23,6 +20,7 @@ import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import { card } from "../../utils/animation.js";
 
 import "./MovieCard.scss";
+import { CardActionArea } from "@material-ui/core";
 
 function MovieCard({ vote, title, date, description, poster }) {
   return (
@@ -38,7 +36,7 @@ function MovieCard({ vote, title, date, description, poster }) {
         <Card className="movieCard__root">
           <CardHeader
             avatar={
-              <Avatar aria-label="recipe" className="movieCard__avatar">
+              <Avatar aria-label="recipe" className={`movieCard__avatar`}>
                 {vote}
               </Avatar>
             }
@@ -50,26 +48,27 @@ function MovieCard({ vote, title, date, description, poster }) {
             title={title.substring(0, 30)}
             subheader={moment(date).format("MMMM DD, YYYY")}
           />
-          <div className="movieCard__media">
-            <CardMedia
-              image={`https://image.tmdb.org/t/p/w500${poster}`}
-              // image="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
-              title="Paella dish"
-            />
-          </div>
-          <CardContent>
-            <div className="movieCard__description">
-              {description.length < 200
-                ? description
-                : description.substring(0, 200) + "..."}
-            </div>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {/* This impressive paella is a perfect party dish and a fun meal to
-            cook together with your guests. Add 1 cup of frozen peas along with
-            the mussels, if you like. */}
-              {/* {description.substring(0, 200)} */}
-            </Typography>
-          </CardContent>
+          <Link to="/movie">
+            <CardActionArea className="movieCard__actionArea">
+              <div className="movieCard__media">
+                <CardMedia
+                  image={`https://image.tmdb.org/t/p/w500${poster}`}
+                  title="Paella dish"
+                />
+              </div>
+              <CardContent>
+                <Typography
+                  variant="body2"
+                  className="movieCard__description"
+                  component="p"
+                >
+                  {description.length < 200
+                    ? description
+                    : description.substring(0, 200) + "..."}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Link>
           <CardActions disableSpacing>
             <IconButton aria-label="add to favorites">
               <FavoriteIcon />
@@ -82,7 +81,6 @@ function MovieCard({ vote, title, date, description, poster }) {
             </IconButton>
           </CardActions>
         </Card>
-        {/* <p>{title}</p> */}
       </div>
     </motion.div>
   );

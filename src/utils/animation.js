@@ -47,3 +47,23 @@ export const card = {
     },
   },
 };
+
+export const card1 = {
+  enter: {
+    y: 100,
+    opacity: 0,
+  },
+  animate: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+  exit: (custom) => ({
+    opacity: 0,
+    y: 100,
+    // transition: {
+    //   delay: 0,
+    // },
+    transition: { delay: custom * 0.2 },
+  }),
+};

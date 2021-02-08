@@ -8,20 +8,23 @@
   justify-content: center;
   align-items: center;
   // text-align: center;
-  cursor: pointer;
 
-  &:hover &__media div {
-    transform: scale(1.1);
+  &__actionArea {
+    &:hover .movieCard__media div {
+      transform: scale(1.1);
+    }
   }
 
   &__media {
     height: 340px;
+    
     div {
       // height: 240px;
       padding-top: 140%;
       transition: transform 500ms ease;
     }
     overflow: hidden;
+    cursor: pointer;
   }
 
   &__root {
@@ -30,18 +33,6 @@
 
   &__content &__avatar {
     background-color: #6769d2;
-  }
-  
-  &__content &__avatar--red {
-    background-color: #ff0000;
-  }
-
-  &__content &__avatar--green {
-    background-color: #0cc961;
-  }
-
-  &__content &__avatar--yellow {
-    background-color: #dfe23d;
   }
 
   &__description {
