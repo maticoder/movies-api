@@ -20,7 +20,7 @@ function MovieLayout({ movie }) {
           className="movieLayout__date"
         />
         <TextReveal
-          text={movie.genres[0].name}
+          text={movie.genres[0]?.name}
           duration={1.4}
           className="movieLayout__genre"
         />
