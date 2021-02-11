@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Movies api
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React application called Moviezilla. The main purpose
+of this application is to freely check the most popular and the top
+rated movies. The users of this application are able to change the
+routes using the sidebar on the left side of the screen. There are
+three main options in the sidebar
 
-## Available Scripts
+* Popular - the most popoular movies
+* Top rated - the top rated movies
+* Latest - the latest movie
 
-In the project directory, you can run:
+The users may also just check each particular movie by clicking on the movie card.
 
-### `yarn start`
+## Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+React
+React Redux
+React router
+Axios
+Framer
+Lottie
+Moment.js
+The movie database API
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## How to run this application
 
-### `yarn test`
+You can check the live demo of this application using the link below
+[link to application!](https://movies-maticoder.netlify.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+But if you want to run this application locally, all you have to do is clone this repo using
 
-### `yarn build`
+```
+git clone https://github.com/maticoder/movies-api.git
+cd movies-api
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+then in the project directory run
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+to install all required node modules, now you are ready to start your application, simply run
 
-### `yarn eject`
+```
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+this command shoul open the application, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+My node and npm versions
+```
+node v14.15.4
+npm 6.14.10
+```
