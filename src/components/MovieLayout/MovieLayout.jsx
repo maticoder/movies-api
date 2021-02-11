@@ -99,8 +99,8 @@ function MovieLayout({ movie }) {
           </div>
           <div className="movieLayout__production">
             <p className="paragraph">Production countries</p>
-            {movie.production_countries.map((country) => (
-              <div key={movie.iso_639_1}>{country.name}</div>
+            {movie.production_countries.map((country, index) => (
+              <div key={index}>{country.name}</div>
             ))}
           </div>
           <div className="movieLayout__link">
@@ -134,7 +134,7 @@ MovieLayout.propTypes = {
     revenue: PropTypes.number,
     runtime: PropTypes.number,
     production_countries: PropTypes.arrayOf(
-      PropTypes.shape({ name: PropTypes.string, iso_639_1: PropTypes.string })
+      PropTypes.shape({ name: PropTypes.string })
     ),
     imdb_id: PropTypes.string,
   }),

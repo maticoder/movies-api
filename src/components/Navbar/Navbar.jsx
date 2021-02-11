@@ -8,7 +8,7 @@ import "./Navbar.scss";
 
 function Navbar() {
   return (
-    <AppBar position="fixed" color="white" className="navbar">
+    <AppBar position="fixed" color="default" className="navbar">
       <Toolbar>
         <Link className="navbar__logo" to="/">
           <div className="navbar__logo__image">

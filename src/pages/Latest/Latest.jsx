@@ -1,13 +1,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { motion } from "framer-motion";
-import Button from "@material-ui/core/Button";
 
-import MovieCard from "../../components/MovieCard/MovieCard.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
-
-import { variants } from "../../utils/animation.js";
-
 import MovieLayout from "../../components/MovieLayout/MovieLayout.jsx";
 
 import "./Latest.scss";
