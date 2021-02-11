@@ -17,9 +17,8 @@
 
   &__media {
     height: 340px;
-    
+
     div {
-      // height: 240px;
       padding-top: 140%;
       transition: transform 500ms ease;
     }
@@ -27,8 +26,9 @@
     cursor: pointer;
   }
 
-  &__root {
+  &__content &__root {
     max-width: 345px;
+    box-shadow: none;
   }
 
   &__content &__avatar {
@@ -41,6 +41,6 @@
   }
 
   &__content &__like {
-    margin-left: auto !important;
+    margin-left: auto;
   }
 }

@@ -22,7 +22,7 @@ import { card } from "../../utils/animation.js";
 import "./MovieCard.scss";
 import { CardActionArea } from "@material-ui/core";
 
-function MovieCard({ vote, title, date, description, poster }) {
+function MovieCard({ id, vote, title, date, description, poster }) {
   return (
     <motion.div
       variants={card}
@@ -48,7 +48,7 @@ function MovieCard({ vote, title, date, description, poster }) {
             title={title.substring(0, 30)}
             subheader={moment(date).format("MMMM DD, YYYY")}
           />
-          <Link to="/movie">
+          <Link to={`/movie/${id}`}>
             <CardActionArea className="movieCard__actionArea">
               <div className="movieCard__media">
                 <CardMedia
@@ -87,6 +87,7 @@ function MovieCard({ vote, title, date, description, poster }) {
 }
 
 MovieCard.propTypes = {
+  id: PropTypes.number,
   vote: PropTypes.number,
   title: PropTypes.string,
   date: PropTypes.string,

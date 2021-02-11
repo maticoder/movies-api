@@ -1,13 +1,14 @@
-.drawer {
+.sidebar {
   display: flex;
 
-  &__sidebar {
+  &__drawer {
     width: 240px;
   }
 
   &__content {
     flex-grow: 1;
     padding: 30px;
+    background-color: #fff;
   }
 
   &__container {

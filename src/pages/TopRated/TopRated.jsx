@@ -8,45 +8,44 @@ import Loader from "../../components/Loader/Loader.jsx";
 
 import { variants } from "../../utils/animation.js";
 
-import "./Popular.scss";
+import "./TopRated.scss";
 
-function Popular({
+function TopRated({
   movies,
-  getPopularMovies,
-  loadPopularMovies,
+  getTopRatedMovies,
+  loadTopRatedMovies,
   loader,
   buttonLoader,
 }) {
   useEffect(() => {
-    getPopularMovies();
-  }, [getPopularMovies]);
+    getTopRatedMovies();
+  }, [getTopRatedMovies]);
 
   return (
     <>
       {loader ? (
         <Loader />
       ) : (
-        <div className="popular">
+        <div className="topRated">
           <motion.h1
             variants={variants}
             initial="enter"
             animate="animate"
             exit="exit"
-            className="header popular__header"
+            className="header topRated__header"
           >
-            Popular
+            Top rated
           </motion.h1>
           <motion.p
             variants={variants}
             initial="enter"
             animate="animate"
             exit="exit"
-            className="paragraph popular__paragraph"
+            className="paragraph topRated__paragraph"
           >
-            The most popular movies over the world
+            The top rated movies over the world
           </motion.p>
-          <div className="popular__content">
-            {/* the movie.id is not uniqe, this is the how the endpoint works, so I decided to use the index as a key instead of the id */}
+          <div className="topRated__content">
             {movies.map((movie, index) => (
               <MovieCard
                 id={movie.id}
@@ -60,7 +59,7 @@ function Popular({
             ))}
           </div>
           <motion.div
-            className="popular__load"
+            className="topRated__load"
             variants={variants}
             initial="enter"
             animate="animate"
@@ -69,7 +68,7 @@ function Popular({
             <Button
               color="primary"
               variant="contained"
-              onClick={() => loadPopularMovies()}
+              onClick={() => loadTopRatedMovies()}
               disabled={buttonLoader}
             >
               Load more
@@ -81,12 +80,12 @@ function Popular({
   );
 }
 
-Popular.propTypes = {
+TopRated.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.shape({})),
-  getPopularMovies: PropTypes.func,
-  loadPopularMovies: PropTypes.func,
+  getTopRatedMovies: PropTypes.func,
+  loadTopRatedMovies: PropTypes.func,
   loader: PropTypes.bool,
   buttonLoader: PropTypes.bool,
 };
 
-export default Popular;
+export default TopRated;

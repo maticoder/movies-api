@@ -1,7 +1,8 @@
-import { SET_LOADER } from "../types.js";
+import { SET_LOADER, SET_BUTTON_LOADER } from "../types.js";
 
 const initialState = {
   loader: false,
+  buttonLoader: false,
 };
 
 const ui = (state = initialState, action) => {
@@ -10,6 +11,11 @@ const ui = (state = initialState, action) => {
       return {
         ...state,
         loader: action.payload,
+      };
+    case SET_BUTTON_LOADER:
+      return {
+        ...state,
+        buttonLoader: action.payload,
       };
     default:
       return state;

@@ -1,0 +1,117 @@
+@import "../../utils/colors";
+
+.movieLayout {
+  &__image {
+    display: inline-block;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    span {
+      color: $black;
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+
+  &__header {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+
+  &__tagline {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  &__poster {
+    display: inline-block;
+
+    img {
+      width: 500px;
+      height: auto;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      flex: 1;
+    }
+  }
+
+  &__overview {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &__rates {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__values {
+    padding: 0 2rem;
+  }
+
+  &__value {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    div:nth-child(1) {
+      text-align: left;
+    }
+
+    div:nth-child(2) {
+      text-align: right;
+    }
+  }
+
+  &__production {
+    margin: 2rem 0;
+
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    div {
+      font-size: 1rem;
+    }
+  }
+
+  &__link {
+    margin: 4rem 0;
+    margin-top: auto;
+  }
+}

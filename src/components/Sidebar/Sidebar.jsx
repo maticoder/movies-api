@@ -10,7 +10,7 @@ import HelpIcon from "@material-ui/icons/Help";
 import Navbar from "../Navbar/Navbar.jsx";
 import LinkItem from "../LinkItem/LinkItem.jsx";
 
-import "./Drawer.scss";
+import "./Sidebar.scss";
 
 const drawerWidth = 240;
 
@@ -20,27 +20,27 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Sidebar(props) {
+function Sidebar({ children }) {
   const classes = useStyles();
 
   return (
-    <div className="drawer">
+    <div className="sidebar">
       <CssBaseline />
       <Navbar />
       <Drawer
-        className="drawer__sidebar"
+        className="sidebar__drawer"
         variant="permanent"
         classes={{
           paper: classes.drawerPaper,
         }}
       >
         <Toolbar />
-        <div className="drawer__container">
+        <div className="sidebar__container">
           <List>
             <LinkItem to="/" text="Home" icon={<HomeIcon />} />
             <LinkItem to="/popular" text="Popular" icon={<StarIcon />} />
             <LinkItem to="/latest" text="Latest" icon={<WatchLaterIcon />} />
-            <LinkItem to="/top" text="Top rated" icon={<ThumbUpIcon />} />
+            <LinkItem to="/top_rated" text="Top rated" icon={<ThumbUpIcon />} />
           </List>
           <Divider />
           <List>
@@ -48,9 +48,9 @@ function Sidebar(props) {
           </List>
         </div>
       </Drawer>
-      <main className="drawer__content">
+      <main className="sidebar__content">
         <Toolbar />
-        {props.children}
+        {children}
       </main>
     </div>
   );
